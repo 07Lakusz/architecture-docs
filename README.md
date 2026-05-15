@@ -1,10 +1,10 @@
-# Architecture Docs — 07Lakusz
+# Architecture Docs - 07Lakusz
 
 Centralised architecture decision records, coding standards, and design patterns for all repositories under the `07Lakusz` GitHub account.
 
 ## Purpose
 
-This repo holds **cross-cutting concerns** — decisions and standards that apply across multiple repositories. Each repo keeps its own `docs/` folder for repo-specific notes and links back to this hub for shared content.
+This repo holds **cross-cutting concerns** - decisions and standards that apply across multiple repositories. Each repo keeps its own `docs/` folder for repo-specific notes and links back to this hub for shared content.
 
 **Rule of thumb:** If a standard or decision applies to more than one repo, it belongs here. If it is specific to one repo's domain, it stays there.
 
@@ -12,20 +12,20 @@ This repo holds **cross-cutting concerns** — decisions and standards that appl
 
 ```
 architecture-docs/
-  README.md              — This file (hub index)
-  adr/                   — Architecture Decision Records
-  standards/             — Coding standards and conventions
-  templates/             — Reusable templates for repo-level docs
+  README.md              - This file (hub index)
+  adr/                   - Architecture Decision Records
+  standards/             - Coding standards and conventions
+  templates/             - Reusable templates for repo-level docs
 ```
 
 ## Repositories
 
 | Repository | Description | Docs |
 |---|---|---|
-| [mcp-server-stock-analysis](https://github.com/07Lakusz/mcp-server-stock-analysis) | Financial analysis MCP server — technical scoring, risk, patterns | [docs/](https://github.com/07Lakusz/mcp-server-stock-analysis/tree/main/docs) |
-| [mcp-kozlony-tracker](https://github.com/07Lakusz/mcp-kozlony-tracker) | Magyar Közlöny monitor — RSS, PDF extraction, topic flagging | [docs/](https://github.com/07Lakusz/mcp-kozlony-tracker/tree/main/docs) |
-| [mcp-agent-crm](https://github.com/07Lakusz/mcp-agent-crm) | MCP-based CRM agent | — |
-| [looper-agent](https://github.com/07Lakusz/looper-agent) | Agent framework component | — |
+| [mcp-server-stock-analysis](https://github.com/07Lakusz/mcp-server-stock-analysis) | Financial analysis MCP server | [docs/](https://github.com/07Lakusz/mcp-server-stock-analysis/tree/main/docs) |
+| [mcp-kozlony-tracker](https://github.com/07Lakusz/mcp-kozlony-tracker) | Magyar Koezlony monitor | [docs/](https://github.com/07Lakusz/mcp-kozlony-tracker/tree/main/docs) |
+| [mcp-agent-crm](https://github.com/07Lakusz/mcp-agent-crm) | MCP-based CRM agent | - |
+| [looper-agent](https://github.com/07Lakusz/looper-agent) | Agent framework component | - |
 
 ## Architecture Decision Records
 
@@ -36,6 +36,8 @@ architecture-docs/
 | [ADR-003](adr/003-stderr-logging.md) | Stderr-Only Logging in Stdio MCP Servers | Accepted |
 | [ADR-004](adr/004-uv-package-manager.md) | uv as Sole Python Package Manager | Accepted |
 | [ADR-005](adr/005-ruff-ty-lint-type.md) | ruff + ty for Linting and Type Checking | Accepted |
+| [ADR-006](adr/006-loguru-logging.md) | loguru for Application Logging | Accepted |
+| [ADR-007](adr/007-pytest-testing.md) | pytest as Sole Test Framework | Accepted |
 
 ## Standards
 
@@ -43,6 +45,10 @@ architecture-docs/
 |---|---|
 | [Python 2026](standards/python-2026.md) | Python language features, tooling stack, and coding conventions |
 | [MCP Compliance](standards/mcp-compliance.md) | Baseline MCP server requirements for all projects |
+| [Testing](standards/testing.md) | pytest, pytest-cov, mocking strategy, fixture design, parametrisation |
+| [Import Linter](standards/import-linter.md) | Architectural boundary enforcement between packages |
+| [CI/CD](standards/ci-cd.md) | GitHub Actions workflow standard, Taskfile, pre-commit, release |
+| [Logging](standards/logging.md) | loguru usage, stderr discipline, structured context, level guidelines |
 
 ## Templates
 
